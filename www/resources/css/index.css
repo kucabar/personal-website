@@ -1,0 +1,45 @@
+.button {
+    padding: 14px 25px;
+
+    background-color: #F87C58;
+    border-radius: 5px;
+    text-align: center;
+}
+
+body {
+    font-family: Inter;
+    background-color: #333647;
+    color: #fefefe;
+
+}
+
+.topnav {
+    display: flex;    
+    background-color: black;
+    justify-content: flex-end;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    
+    color: #fefefe;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.topnav a:hover {
+    background-color: #F87C58;
+    color: #fefefe;
+}
+
+section {
+    flex-direction: column;
+}
+
+.about-me-all {
+    display: block;
+}
