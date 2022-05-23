@@ -1,13 +1,28 @@
-.button {
-    padding: 14px 25px;
+@import url('https://rsms.me/inter/inter.css');
 
+
+.button { 
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
     background-color: #F87C58;
     border-radius: 5px;
     text-align: center;
 }
 
+html {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    /*min-width: 1024px;
+    min-height: 768px;*/
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+
 body {
-    font-family: Inter;
     background-color: #333647;
     color: #fefefe;
 
@@ -30,6 +45,11 @@ body {
     font-size: 16px;
 }
 
+a:visited {
+    color: #fefefe;
+    text-decoration: none;
+}
+
 
 .topnav a:hover {
     background-color: #F87C58;
@@ -40,6 +60,89 @@ section {
     flex-direction: column;
 }
 
-.about-me-all {
-    display: block;
+
+
+#hello-world {
+    font-size: 24px;
 }
+
+h1 {
+    font-size: 78px;
+    font-weight: 800;
+    margin: 1em 0em 0.5em 0em;
+    padding: 0%;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+#intro-p {
+    max-width: 600px;
+    font-weight: 200;
+    padding: 0%;
+    margin: 0%;
+    text-align: justify;
+}
+
+
+
+/* grid templates */
+
+/* intro */
+.intro {
+    margin: 15% 0%;
+}
+
+/* about me */
+.about-me-all {  display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      ". . about-me-header about-me-header"
+      "contact . about-me-text about-me-text"
+      ". . button .";
+    background-color: #282A39
+    ;
+    
+    
+  }
+  
+  .about-me-header {
+    align-self: end;
+    grid-area: about-me-header;
+    margin: 0%;
+  }
+  
+  .about-me-text {
+    align-self: start;
+    grid-area: about-me-text;
+  }
+  
+  .contact {
+    align-self: start;
+    grid-area: contact;
+  }
+  
+  .button {
+    align-self: start;
+    grid-area: button;
+    
+  }
+  
+  
